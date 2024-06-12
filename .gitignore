@@ -1,0 +1,13 @@
+.DS_Store
+.pkg/
+.env
+#.cli/
+out/
+#.vscode/
+.roku-deploy-staging/
+*.iml
+*idea/**
+RALE/TrackerTask.xml
+build
+out
+node_modules

@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "TMD app",
+            "type": "brightscript",
+            "request": "launch",
+            "consoleOutput": "normal",
+            "internalConsoleOptions": "openOnSessionStart",
+            "preLaunchTask": "gulp build TMD",
+            "envFile": "${workspaceFolder}/.env",
+            "host": "${env:ROKU_DEV_TARGET}",
+            "password": "${env:ROKU_DEV_PASSWORD}",
+            "retainStagingFolder": false,
+            "stopOnEntry": false,
+            "injectRdbOnDeviceComponent": true,
+            "files": [
+                "*",
+                "*.*",
+                "**/*.*"
+            ],
+            "rootDir": "${workspaceFolder}/build",
+            "sourceDirs": [
+                "${workspaceFolder}"
+            ]
+        }
+    ]
+}

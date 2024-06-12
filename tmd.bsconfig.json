@@ -1,0 +1,64 @@
+{
+    "plugins": [
+        "@rokucommunity/bslint"
+    ],
+    "stagingFolderPath": "./build",
+    "createPackage": false,
+    "copyToStaging": true,
+    "retainStagingDir": true,
+    "retainStagingFolder": true,
+    "sourceMap": true,
+    "diagnosticFilters": [
+        "node_modules/**/*",
+        {
+            "src": "**/{RALETrackerTask,TestScene}.xml",
+            "codes": [
+                1000,
+                1001,
+                1002,
+                1004,
+                1003,
+                1067
+            ]
+        },
+        {
+            "src": "**/TestScene_tests.brs",
+            "codes": [
+                1013
+            ]
+        },
+        {
+            "src": "**/*",
+            "codes": [
+                "LINT1001",
+                "LINT3008",
+                "LINT3014",
+                1104,
+                1001,
+                1128
+            ]
+        }
+    ],
+    "files": [
+        {
+            "src": "source/**",
+            "dest": "/source"
+        },
+        {
+            "src": "components/**",
+            "dest": "/components/"
+        },
+        {
+            "src": "manifest",
+            "dest": "/"
+        },
+        {
+            "src": "images/**",
+            "dest": "/images/"
+        },
+        {
+            "src": "fonts/**",
+            "dest": "/fonts/"
+        }
+    ]
+}

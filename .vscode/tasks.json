@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "gulp build TMD",
+            "type": "shell",
+            "command": "gulp",
+            "args": [
+                "build",
+                "--project",
+                "TMDApp"
+            ]
+        },
+        {
+            "label": "gulp build unit tests",
+            "type": "shell",
+            "command": "gulp",
+            "args": [
+                "build",
+                "--project",
+                "unitTests"
+            ]
+        }
+    ]
+}

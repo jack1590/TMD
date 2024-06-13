@@ -7,14 +7,6 @@
     <script type="text/brightscript" uri="./HomeView.brs"/>
 
     <children>
-        <Label id="title" text="This is the HomeView" />
-
-        <Button
-            id = "gotToButton"
-            text = "Go to Details"
-            showFocusFootprint = "true"
-            minWidth = "240"
-            translation="[500, 500]" />
-
+        <Menu id="menu" />
     </children>
 </component>

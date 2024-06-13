@@ -3,6 +3,9 @@
 
     <interface>
         <function name="initialize" />
+
+        <!-- Read fields-->
+        <field id="itemSelected" type="assocarray" />
     </interface>
 
     <script type="text/brightscript" uri="./Menu.brs" />

@@ -5,20 +5,20 @@ end sub
 
 sub bindComponents()
     m.navigationManager = m.global.navigationManager
-    m.gotToButton = m.top.findNode("gotToButton")
+    m.menu = m.top.findNode("menu")
 end sub
 
 sub initialize(viewParams as Object)
-    m.gotToButton.setFocus(true)
+    m.menu.callFunc("initialize")
 end sub
 
 sub registerObservers()
-    m.gotToButton.observeField("buttonSelected", "onButtonSelected")
+    m.menu.observeField("itemSelected", "onMenuItemSelected")
 end sub
 
-sub onButtonSelected()
-    m.navigationManager.callFunc("navigateTo", {
-        "viewName": "details"
-        "viewParams": {}
-    })
+'|----------------------------------------------|
+'|              Callbacks Methods                  |
+'|----------------------------------------------|
+sub onMenuItemSelected(event as Object)
+    itemSelected = event.getData()
 end sub

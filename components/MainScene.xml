@@ -8,7 +8,6 @@
     <script type="text/brightscript" uri="./MainScene.brs" />
 
     <children>
-        <Menu id="menu" />
         <NavigationManager id="navigationManager" />
     </children>
 </component>

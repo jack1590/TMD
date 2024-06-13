@@ -19,10 +19,8 @@ end sub
 sub setupCoreComponents()
     m.logger = Logger()
     m.navigationManager = m.top.findNode("navigationManager")
-    m.menu = m.top.findNode("menu")
 end sub
 
 sub initializeCoreComponents()
     m.navigationManager.callFunc("initialize")
-    m.menu.callFunc("initialize")
 end sub

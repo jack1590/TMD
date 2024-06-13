@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="MainScene" extends="Scene">
 
+    <!-- Logger -->
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/Logger.brs" />
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/LogLevels.brs" />
+
     <script type="text/brightscript" uri="./MainScene.brs" />
 
     <children>
+        <NavigationManager id="navigationManager" />
     </children>
 </component>
+

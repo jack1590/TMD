@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+'***************************************************
+'** TMD
+'**
+'** Juan Joya
+'**
+'** NavigationManager is the component for storing and showing views
+'***************************************************
+-->
+<component name="NavigationManager" extends="Group">
+    <interface>
+        <!-- Initialize the nav manager-->
+        <function name="initialize"/>
+        <!-- Go to another view, keeping the stack-->
+        <function name="navigateTo"/>
+    </interface>
+
+    <!-- Logger -->
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/Logger.brs" />
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/LogLevels.brs" />
+
+    <script type="text/brightscript" uri="./NavigationManager.brs"/>
+
+    <children>
+        <Group id="viewPort"/>
+    </children>
+</component>

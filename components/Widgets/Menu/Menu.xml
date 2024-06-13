@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="Menu" extends="Group">
+
+    <interface>
+        <function name="initialize" />
+    </interface>
+
+    <script type="text/brightscript" uri="./Menu.brs" />
+
+    <children>
+        <LayoutGroup
+            id="container"
+            horizAlignment="center"
+            translation="[960, 25]">
+
+            <MarkupGrid
+                id="menuGrid"
+                itemComponentName="MenuItem"
+                numColumns="5"
+                numRows="1"
+                itemSize="[ 322, 102 ]"
+                itemSpacing="[ 25, 0]"
+                drawFocusFeedback="false" />
+
+        </LayoutGroup>
+    </children>
+</component>

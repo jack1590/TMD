@@ -1,11 +1,12 @@
 sub init()
-    createCoreComponents()
+    setupCoreComponents()
     setGlobalFields()
-    m.logger.info("App created", "MainScene")
+    initializeCoreComponents()
     m.navigationManager.callFunc("navigateTo", {
         "viewName": "home"
         "viewParams": {}
     })
+    m.logger.info("App created", "MainScene")
 end sub
 
 sub setGlobalFields()
@@ -15,8 +16,13 @@ sub setGlobalFields()
     })
 end sub
 
-sub createCoreComponents()
+sub setupCoreComponents()
     m.logger = Logger()
     m.navigationManager = m.top.findNode("navigationManager")
+    m.menu = m.top.findNode("menu")
+end sub
+
+sub initializeCoreComponents()
     m.navigationManager.callFunc("initialize")
+    m.menu.callFunc("initialize")
 end sub

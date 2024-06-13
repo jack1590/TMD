@@ -1,8 +1,8 @@
 sub init()
-    m.genresService = GenresService(m.global.config)
 end sub
 
 sub execute()
+    m.genresService = GenresService(m.global.config)
     genres = m.genresService.getGenres()
     content = CreateObject("roSGNode", "ContentNode")
     for each item in genres

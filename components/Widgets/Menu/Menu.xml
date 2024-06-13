@@ -18,7 +18,7 @@
                 itemComponentName="MenuItem"
                 numColumns="5"
                 numRows="1"
-                itemSize="[ 322, 102 ]"
+                itemSize="[ 324, 104 ]"
                 itemSpacing="[ 25, 0]"
                 drawFocusFeedback="false" />
 

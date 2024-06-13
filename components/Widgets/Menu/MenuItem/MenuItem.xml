@@ -5,6 +5,9 @@
         <field id = "focusPercent" type="float" onChange="showFocus"/>
     </interface>
 
+    <!--Extensions-->
+    <script type="text/brightscript" uri="pkg:/source/tmd/extensions/NodeExtensions.brs" />
+
     <script type="text/brightscript" uri="./MenuItem.brs" />
 
     <children>
@@ -13,21 +16,24 @@
             width="320"
             height="100"
             uri="pkg:/images/$$RES$$/button-background-30.9.png"
-            translation="[1,1]"
-            blendColor="0x1E3A45"/>
+            translation="[2,2]"
+            blendColor="#77b1a9"
+            opacity="0.75"/>
 
         <Poster
             id="border"
-            width="322"
-            height="102"
+            width="324"
+            height="104"
             uri="pkg:/images/$$RES$$/button-border-30.9.png"
+            blendColor="#b1e6d1"
             opacity="0" />
 
         <Label
             id="name"
-            width="322"
-            height="102"
+            width="324"
+            height="104"
             horizAlign="center"
-            vertAlign="center" />
+            vertAlign="center"
+            color="#FFFFFF" />
     </children>
 </component>

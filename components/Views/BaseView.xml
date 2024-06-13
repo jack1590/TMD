@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BaseView" extends="Group">
+    <interface>
+        <function name="initialize" />
+    </interface>
+
+    <!-- Logger -->
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/Logger.brs" />
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/LogLevels.brs" />
+
+    <script type="text/brightscript" uri="./BaseView.brs" />
+
+    <children>
+    </children>
+</component>

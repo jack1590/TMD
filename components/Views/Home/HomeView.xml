@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeView" extends="Group">
+    <interface>
+        <function name="initialize" />
+    </interface>
+
+    <script type="text/brightscript" uri="./HomeView.brs"/>
+
+    <children>
+        <Label id="title" text="This is the HomeView" />
+
+        <Button
+            id = "gotToButton"
+            text = "Go to Details"
+            showFocusFootprint = "true"
+            minWidth = "240"
+            translation="[500, 500]" />
+
+    </children>
+</component>

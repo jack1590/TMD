@@ -25,7 +25,7 @@ sub registerObservers()
 end sub
 
 sub loadAssetsByGenre(genreId as String)
-    m.contentTask.observeField("response", "onContentCahnged")
+    m.contentTask.observeField("response", "onContentChanged")
     m.contentTask.control = "RUN"
 end sub
 
@@ -43,7 +43,7 @@ sub onMenuItemSelected(event as Object)
     loadAssetsByGenre(itemSelected.id.toStr())
 end sub
 
-sub onContentCahnged(event as Object)
+sub onContentChanged(event as Object)
     response = event.getData()
     m.contentRowList.content = response.content
 end sub
@@ -58,6 +58,9 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
     if press
         if key = "down" AND m.menu.isInFocusChain()
             m.contentRowList.setFocus(true)
+            handled = true
+        else if key = "up" AND m.contentRowList.isInFocusChain()
+            m.menu.setFocus(true)
             handled = true
         end if
     end if

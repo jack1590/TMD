@@ -14,6 +14,7 @@ function createContent(movies as Object) as Object
         movie = movies[i]
         if i mod 4 = 0
             section = content.createChild("ContentNode")
+            section.title = "Row " + ((i / 4) + 1).toStr()
         end if
         item = section.createChild("ContentNode")
         item.setFields({

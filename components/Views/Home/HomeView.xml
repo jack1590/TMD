@@ -16,7 +16,7 @@
                 itemComponentName="ContentItem"
                 rowTitleComponentName="RowTitleItem"
                 focusBitmapUri="pkg:/images/$$RES$$/listFocus.9.png"
-                focusBitmapBlendColor="0xEEEEEEFF"
+                focusBitmapBlendColor="0xb1e6d1FF"
                 numRows="2"
                 vertFocusAnimationStyle="floatingFocus"
                 rowFocusAnimationStyle="floatingFocus"

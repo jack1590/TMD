@@ -9,7 +9,7 @@ sub bindComponents()
 end sub
 
 sub setStyles()
-    m.title = getFont("pkg:/fonts/HKGrotesk-Italic.otf", 26)
+    m.title.font = getFont("pkg:/fonts/HKGrotesk-Italic.otf", 26)
 end sub
 
 'Callbacks

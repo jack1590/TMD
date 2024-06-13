@@ -18,7 +18,7 @@
             height="100"
             uri="pkg:/images/$$RES$$/button-background-30.9.png"
             translation="[2,2]"
-            blendColor="#77b1a9"
+            blendColor="#77b1a9FF"
             opacity="0.75"/>
 
         <Poster

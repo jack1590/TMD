@@ -11,5 +11,11 @@
     <script type="text/brightscript" uri="./BaseView.brs" />
 
     <children>
+        <Poster
+            id="background"
+            loadDisplayMode="scaleToFill"
+            loadWidth="1920"
+            loadHeight="1080"
+            uri="pkg:/images/background.jpeg" />
     </children>
 </component>

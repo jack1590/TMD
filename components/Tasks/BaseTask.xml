@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BaseTask" extends="Task">
+    <interface>
+        <!-- Output field-->
+        <field id="response" type="assocarray" />
+    </interface>
+
+    <!-- Logger -->
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/Logger.brs" />
+    <script type="text/brightscript" uri="pkg:/source/tmd/logger/LogLevels.brs"/>
+
+    <!-- Requests-->
+    <script type="text/brightscript" uri="pkg:/source/tmd/network/Requests.brs"/>
+
+    <script type="text/brightscript" uri="./BaseTask.brs" />
+</component>
+

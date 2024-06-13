@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "@rokucommunity/bslint"
+        "@rokucommunity/bslint",
+        "./scripts/buildPlugins/env.js"
     ],
     "stagingFolderPath": "./build",
     "createPackage": false,
@@ -59,6 +60,10 @@
         {
             "src": "fonts/**",
             "dest": "/fonts/"
+        },
+        {
+            "src": "config/**",
+            "dest": "/config/"
         }
     ]
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ContentItem" extends="group">
+
+    <interface>
+        <field id="itemContent" type="node" onChange="onItemContentChanged"/>
+        <field id="rowListHasFocus" type="boolean" onChange="onFieldChanged"/>
+        <field id="itemHasFocus" type="boolean" onChange="onFieldChanged"/>
+        <field id="focusPercent" type="float" onChange="onFieldChanged"/>
+        <field id="width" type="float"/>
+        <field id="height" type="float"/>
+    </interface>
+
+    <!-- Extensions -->
+    <script type="text/brightscript" uri="pkg:/source/tmd/extensions/NodeExtension.brs"/>
+
+    <script type="text/brightscript" uri="./ContentItem.brs"/>
+
+    <children>
+        <LayoutGroup
+            id="layoutGroup">
+            <Poster id="poster"/>
+            <Label id="title" />
+            <Label id="description" />
+        </LayoutGroup>
+    </children>
+
+</component>

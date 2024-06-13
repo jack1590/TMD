@@ -3,6 +3,31 @@
     <script type="text/brightscript" uri="./HomeView.brs"/>
 
     <children>
-        <Menu id="menu" />
+        <LayoutGroup
+            id="container"
+            horizAlignment="center"
+            itemSpacings="[50]"
+            translation="[960,0]">
+
+            <Menu id="menu" />
+
+            <RowList
+                id="contentRowList"
+                itemComponentName="ContentItem"
+                rowTitleComponentName="RowTitleItem"
+                focusBitmapUri="pkg:/images/$$RES$$/listFocus.9.png"
+                focusBitmapBlendColor="0xEEEEEEFF"
+                numRows="2"
+                vertFocusAnimationStyle="floatingFocus"
+                rowFocusAnimationStyle="floatingFocus"
+                drawFocusFeedbackOnTop="true"
+                itemSize="[1718,390]"
+                rowItemSize="[[413.5, 300]]"
+                showRowLabel="[true]"
+                rowItemSpacing="[[16,10]]"
+                rowLabelOffset="[[0,24]]" />
+
+        </LayoutGroup>
+
     </children>
 </component>

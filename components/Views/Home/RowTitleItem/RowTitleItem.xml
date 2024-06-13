@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="RowTitleItem" extends="Group">
+
+    <interface>
+        <field id="content" type="node" onChange="onContentChanged"/>
+    </interface>
+
+    <!--Extensions-->
+    <script type="text/brightscript" uri="pkg:/source/tmd/extensions/NodeExtension.brs" />
+
+    <script type="text/brightscript" uri="./RowTitleItem.brs"/>
+
+    <children>
+        <Rectangle
+            id="line"
+            width="8"
+            height="36"
+            color="#FFB800FF"/>
+        <Label
+            id="title"
+            translation="[24,3]"/>
+    </children>
+
+</component>

@@ -19,4 +19,10 @@ end sub
 
 sub showfocus()
     m.border.opacity = m.top.focusPercent
+    if NOT m.top.gridHasFocus AND m.border.opacity = 1
+        m.name.color = "#000000"
+        m.border.opacity = 0
+    else
+        m.name.color = "#FFFFFF"
+    end if
 end sub

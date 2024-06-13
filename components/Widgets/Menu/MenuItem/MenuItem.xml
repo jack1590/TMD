@@ -3,6 +3,7 @@
     <interface>
         <field id = "itemContent" type="node" onChange="showContent"/>
         <field id = "focusPercent" type="float" onChange="showFocus"/>
+        <field id = "gridHasFocus" type="boolean" onChange="showFocus"/>
     </interface>
 
     <!--Extensions-->

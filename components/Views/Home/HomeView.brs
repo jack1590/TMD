@@ -16,6 +16,7 @@ end sub
 sub bindComponents()
     m.navigationManager = m.global.navigationManager
     m.menu = m.top.findNode("menu")
+    m.contentRowList = m.top.findNode("contentRowList")
     m.contentTask = CreateObject("roSGNode", "ContentTask")
 end sub
 
@@ -24,6 +25,7 @@ sub registerObservers()
 end sub
 
 sub loadAssetsByGenre(genreId as String)
+    m.contentTask.observeField("response", "onContentCahnged")
     m.contentTask.control = "RUN"
 end sub
 
@@ -40,3 +42,25 @@ sub onMenuItemSelected(event as Object)
     m.logger.verbose("Loading information for genre", m.name, itemSelected)
     loadAssetsByGenre(itemSelected.id.toStr())
 end sub
+
+sub onContentCahnged(event as Object)
+    response = event.getData()
+    m.contentRowList.content = response.content
+end sub
+
+
+'|----------------------------------------------|
+'|              Native Methods                  |
+'|----------------------------------------------|
+
+function onKeyEvent(key as String, press as Boolean) as Boolean
+    handled = false
+    if press
+        if key = "down" AND m.menu.isInFocusChain()
+            m.contentRowList.setFocus(true)
+            handled = true
+        end if
+    end if
+
+    return handled
+end function

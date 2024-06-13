@@ -9,7 +9,10 @@ sub init()
 end sub
 
 sub setGlobalFields()
-    m.global.addFields({ navigationManager: m.navigationManager })
+    m.global.addFields({
+        navigationManager: m.navigationManager
+        config: parseJson(ReadAsciiFile("pkg:/config/config.json"))
+    })
 end sub
 
 sub createCoreComponents()

@@ -6,7 +6,7 @@
     </interface>
 
     <!--Extensions-->
-    <script type="text/brightscript" uri="pkg:/source/tmd/extensions/NodeExtensions.brs" />
+    <script type="text/brightscript" uri="pkg:/source/tmd/extensions/NodeExtension.brs" />
 
     <script type="text/brightscript" uri="./MenuItem.brs" />
 

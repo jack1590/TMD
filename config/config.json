@@ -1,6 +1,11 @@
 {
     "tmdAcessToken": "${TMD_ACCESS_TOKEN}",
     "tmdApiKey": "${TMD_API_KEY}",
+    "discoverFilters": {
+        "page": 1,
+        "sort_by": "popularity.desc",
+        "with_genres": ""
+    },
     "movieGenreEndpoint": "https://api.themoviedb.org/3/genre/movie/list",
-    "tvGenreEndpoint": "https://api.themoviedb.org/3/genre/tv/list"
+    "discoverEndpoint": "https://api.themoviedb.org/3/discover/movie"
 }

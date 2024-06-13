@@ -8,7 +8,7 @@ function Logger(logLevel = LogLevels().VERBOSE as Integer) as Object
     this = {
         defaultParamsValue: "_logparams_"
         loggerLogLevel: invalid
-        logPrefix: "MSG - "
+        logPrefix: "TMD - "
         logContext: ""
         logLevels: [
             "SILENT " ' not used

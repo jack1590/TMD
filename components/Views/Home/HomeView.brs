@@ -16,6 +16,7 @@ end sub
 sub bindComponents()
     m.navigationManager = m.global.navigationManager
     m.menu = m.top.findNode("menu")
+    m.contentTask = CreateObject("roSGNode", "ContentTask")
 end sub
 
 sub registerObservers()
@@ -23,7 +24,7 @@ sub registerObservers()
 end sub
 
 sub loadAssetsByGenre(genreId as String)
-
+    m.contentTask.control = "RUN"
 end sub
 
 '|----------------------------------------------|

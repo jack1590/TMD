@@ -3,6 +3,7 @@
     <interface>
         <!-- Output field-->
         <field id="response" type="assocarray" />
+        <field id="responseNode" type="node" />
     </interface>
 
     <!-- Logger -->

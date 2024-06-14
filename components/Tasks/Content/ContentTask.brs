@@ -3,7 +3,7 @@ sub execute()
     m.page = 1
     if currentData?.page <> invalid then m.page = currentData?.page
     m.contentService = ContentService(m.global.config)
-    response = m.contentService.getContentByGenreId("", m.page)
+    response = m.contentService.getContentByGenreId(m.top.genreId, m.page)
     if response.ok
         response.content = createContent(response.json.results)
     end if

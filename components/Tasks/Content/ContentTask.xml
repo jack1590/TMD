@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="ContentTask" extends="BaseTask">
 
+    <interface>
+        <field id="genreId" type="string" />
+    </interface>
+
     <!-- Content Service-->
     <script type="text/brightscript" uri="pkg:/source/tmd/services/ContentService.brs" />
 

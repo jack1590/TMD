@@ -28,6 +28,13 @@ sub registerObservers()
 end sub
 
 sub loadAssetsByGenre(genreId as String)
+    if m.contentTask.genreId <> genreId
+        m.contentTask.unobserveField("response")
+        m.contentTask.response = invalid
+        m.global.loading = true
+        m.contentRowList.content = invalid
+    end if
+    m.contentTask.genreId = genreId
     m.contentTask.observeField("response", "onContentChanged")
     m.contentTask.control = "RUN"
 end sub

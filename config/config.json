@@ -8,5 +8,5 @@
     },
     "movieGenreEndpoint": "https://api.themoviedb.org/3/genre/movie/list",
     "discoverEndpoint": "https://api.themoviedb.org/3/discover/movie",
-    "imageEndpoint": "https://image.tmdb.org/t/p/w{0}/{1}"
+    "imageEndpoint": "https://image.tmdb.org/t/p/{0}/{1}"
 }

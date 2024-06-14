@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DetailsView" extends="BaseView">
+
+    <script type="text/brightscript" uri="./DetailsView.brs" />
+
+    <children>
+        <LayoutGroup
+            id="container"
+            layoutDirection="horiz"
+            itemSpacings="[50]"
+            translation="[90,90]">
+
+            <LayoutGroup
+                id="detailsGroup"
+                itemSpacings="[25]">
+
+                <Label id="title" width="800" wrap="true"/>
+                <Label id="subtitle" width="800" wrap="true"/>
+                <Label id="description" width="800" wrap="true"/>
+
+            </LayoutGroup>
+
+            <Poster
+                id="moviePoster" />
+
+        </LayoutGroup>
+    </children>
+</component>

@@ -1,4 +1,8 @@
 sub init()
+    bindComponents()
+end sub
+
+sub bindComponents()
     m.name = m.top.subtype()
     m.viewStack = []
     m.viewport = m.top.findNode("viewPort")
@@ -12,6 +16,10 @@ sub init()
         }
     }
 end sub
+
+'|----------------------------------------------|
+'|              Public Methods                  |
+'|----------------------------------------------|
 
 '---------
 ' initialize:
@@ -36,6 +44,15 @@ sub navigateTo(params as Object)
     end if
 end sub
 
+'---------
+' getCurrentScreen:
+' Retrieves the current screen displayed in the viewport.
+'
+' @returns {Object} - The current screen node if the viewport has any children, otherwise returns invalid.
+'
+' This method checks if the viewport has any children. If it does, it returns the first child (the current screen).
+' If the viewport is empty, it returns invalid.
+'---------
 function getCurrentScreen()
     currentScreen = invalid
     if m.viewPort.getChildCount() > 0
@@ -66,6 +83,10 @@ sub goToPrevious() as Boolean
         return true
     end if
 end sub
+
+'|----------------------------------------------|
+'|              Private Methods                 |
+'|----------------------------------------------|
 
 '---------
 ' createView:
@@ -104,6 +125,10 @@ sub appendToViewPort(view as Object)
     end if
     view.setFocus(true)
 end sub
+
+'|----------------------------------------------|
+'|              Native Methods                  |
+'|----------------------------------------------|
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
     handled = false

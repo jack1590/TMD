@@ -3,6 +3,10 @@ sub init()
     setStyles()
 end sub
 
+'|----------------------------------------------|
+'|              Private Methods                 |
+'|----------------------------------------------|
+
 sub bindComponents()
     m.poster = m.top.findNode("poster")
     m.title = m.top.findNode("title")
@@ -33,7 +37,7 @@ sub onItemContentChanged(event as Object)
     m.title.text = itemContent.title
     m.description.text = itemContent.ReleaseDate
     roundedValue = (width + 99) \ 100 * 100
-    uri = Substitute(m.global.config.imageEndpoint, roundedValue.toStr(), itemContent.FHDPosterUrl)
+    uri = Substitute(m.global.config.imageEndpoint, "w" + roundedValue.toStr(), itemContent.FHDPosterUrl)
     if itemContent.FHDPosterUrl = "" then uri = "pkg:/images/failedImage.jpeg"
     m.poster.setFields({
         loadDisplayMode: "scaleToFill"

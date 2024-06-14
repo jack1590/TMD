@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<component name="DetailsView" extends="Group">
-
-    <children>
-        <Label id="title" text="This is the DetailView" />
-    </children>
-</component>

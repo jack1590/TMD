@@ -4,6 +4,7 @@ sub init()
 end sub
 
 sub bindBaseComponents()
+    m.navigationManager = m.global.navigationManager
     m.logger = Logger()
     m.name = m.top.subtype()
     m.defaultFocusId = ""

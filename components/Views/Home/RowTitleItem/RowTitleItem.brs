@@ -3,6 +3,10 @@ sub init()
     setStyles()
 end sub
 
+'|----------------------------------------------|
+'|              Private Methods                 |
+'|----------------------------------------------|
+
 sub bindComponents()
     m.line = m.top.findNode("line")
     m.title = m.top.findNode("title")
@@ -12,7 +16,9 @@ sub setStyles()
     m.title.font = getFont("pkg:/fonts/HKGrotesk-Italic.otf", 26)
 end sub
 
-'Callbacks
+'|----------------------------------------------|
+'|              Callbacks Methods               |
+'|----------------------------------------------|
 
 '-------------
 ' onContentChanged()

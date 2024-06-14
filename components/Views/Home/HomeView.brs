@@ -16,7 +16,6 @@ end sub
 '|              Private Methods                 |
 '|----------------------------------------------|
 sub bindComponents()
-    m.navigationManager = m.global.navigationManager
     m.menu = m.top.findNode("menu")
     m.contentRowList = m.top.findNode("contentRowList")
     m.contentTask = CreateObject("roSGNode", "ContentTask")
@@ -25,6 +24,7 @@ end sub
 sub registerObservers()
     m.menu.observeField("itemSelected", "onMenuItemSelected")
     m.contentRowList.observeField("rowItemFocused", "onRowItemFocusedChanged")
+    m.contentRowList.observeField("rowItemSelected", "onRowItemSelectedChanged")
 end sub
 
 sub loadAssetsByGenre(genreId as String)
@@ -74,6 +74,17 @@ sub onRowItemFocusedChanged(event as Object)
         m.contentTask.observeField("response", "onContentChanged")
         m.contentTask.control = "RUN"
     end if
+end sub
+
+sub onRowItemSelectedChanged(event as Object)
+    rowIndex = event.getData()
+    content = m.contentRowList.content.getChild(rowIndex[0]).getChild(rowIndex[1])
+    m.navigationManager.callFunc("navigateTo", {
+        "viewName": "details"
+        "viewParams": {
+            content: content.getFields()
+        }
+    })
 end sub
 
 

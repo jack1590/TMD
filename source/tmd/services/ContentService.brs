@@ -9,10 +9,11 @@ function ContentService(config as Object) as Object
         '|              Public Methods                  |
         '|----------------------------------------------|
 
-        getContentByGenreId: function(genreId as String) as Object
+        getContentByGenreId: function(genreId as String, page as Integer) as Object
             m.logger.verbose("Getting content by genre", m.name, genreId)
             headers = { "Authorization": "Bearer " + m.config.tmdAcessToken }
-            return m.request.get(m.config.discoverEndpoint, { "headers": headers })
+            url = m.config.discoverEndpoint + m._buildQueryParams(page)
+            return m.request.get(url, { "headers": headers })
         end function
 
         '|----------------------------------------------|
@@ -22,6 +23,10 @@ function ContentService(config as Object) as Object
             if m.config = invalid
                 m.logger.error("config is invalid")
             end if
+        end function
+
+        _buildQueryParams: function(page as Integer) as String
+            return "?page=" + page.toStr()
         end function
     }
 

@@ -8,6 +8,9 @@
     <script type="text/brightscript" uri="pkg:/source/tmd/logger/Logger.brs" />
     <script type="text/brightscript" uri="pkg:/source/tmd/logger/LogLevels.brs" />
 
+    <!-- Extensions -->
+    <script type="text/brightscript" uri="pkg:/source/tmd/extensions/NodeExtension.brs" />
+
     <script type="text/brightscript" uri="./BaseView.brs" />
 
     <children>

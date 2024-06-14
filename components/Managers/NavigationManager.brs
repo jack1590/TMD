@@ -36,6 +36,14 @@ sub navigateTo(params as Object)
     end if
 end sub
 
+function getCurrentScreen()
+    currentScreen = invalid
+    if m.viewPort.getChildCount() > 0
+        currentScreen = m.viewPort.getChild(0)
+    end if
+    return currentScreen
+end function
+
 '---------
 ' goToPrevious:
 ' Navigates to the previous view in the stack.

@@ -32,10 +32,20 @@ sub onItemContentChanged(event as Object)
     m.description.width = height
     m.title.text = itemContent.title
     m.description.text = itemContent.ReleaseDate
+    roundedValue = (width + 99) \ 100 * 100
+    uri = Substitute(m.global.config.imageEndpoint, roundedValue.toStr(), itemContent.FHDPosterUrl)
+    m.poster.observeField("loadStatus", "onLoadStatusChanged")
     m.poster.setFields({
-        loadDisplayMode: "scaleToFill"
+        loadDisplayMode: "limitSize"
         loadWidth: width
         loadHeight: height - 70
-        uri: Substitute(m.global.config.imageEndpoint, itemContent.FHDPosterUrl)
+        uri: uri
     })
+end sub
+
+sub onLoadStatusChanged(event as Object)
+    state = event.getData()
+    if state = "failed"
+        print "onLoadStatusChanged ";event.getRoSGNode().uri
+    end if
 end sub

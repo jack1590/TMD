@@ -7,6 +7,8 @@ end sub
 '|              Public Methods                 |
 '|----------------------------------------------|
 sub initialize(viewParams as Object)
+    m.menu.setFocus(true)
+    m.global.loading = true
     m.menu.callFunc("initialize")
 end sub
 
@@ -22,6 +24,7 @@ end sub
 
 sub registerObservers()
     m.menu.observeField("itemSelected", "onMenuItemSelected")
+    m.contentRowList.observeField("rowItemFocused", "onRowItemFocusedChanged")
 end sub
 
 sub loadAssetsByGenre(genreId as String)
@@ -45,7 +48,25 @@ end sub
 
 sub onContentChanged(event as Object)
     response = event.getData()
-    m.contentRowList.content = response.content
+    if m.contentRowList.content = invalid
+        m.contentRowList.content = response.content
+    else
+        m.contentRowList.content.appendChildren(response.content.getChildren(-1, 0))
+    end if
+    m.global.loading = false
+end sub
+
+sub onRowItemFocusedChanged(event as Object)
+    rowIndex = event.getData()
+    if m.contentRowList.content.getChildCount() - rowIndex[0] <= 2
+        m.global.loading = true
+        m.contentTask.unobserveField("response")
+        response = m.contentTask.response
+        response.json.page++
+        m.contentTask.response = response
+        m.contentTask.observeField("response", "onContentChanged")
+        m.contentTask.control = "RUN"
+    end if
 end sub
 
 

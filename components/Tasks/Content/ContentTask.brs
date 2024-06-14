@@ -1,6 +1,9 @@
 sub execute()
+    currentData = m.top.response?.json
+    m.page = 1
+    if currentData?.page <> invalid then m.page = currentData?.page
     m.contentService = ContentService(m.global.config)
-    response = m.contentService.getContentByGenreId("")
+    response = m.contentService.getContentByGenreId("", m.page)
     if response.ok
         response.content = createContent(response.json.results)
     end if
@@ -8,13 +11,14 @@ sub execute()
 end sub
 
 function createContent(movies as Object) as Object
+    offset = 5 * (m.page - 1)
     content = CreateObject("roSGNode", "ContentNode")
     section = invalid
     for i = 0 to movies.count() - 1
         movie = movies[i]
         if i mod 4 = 0
             section = content.createChild("ContentNode")
-            section.title = "Row " + ((i / 4) + 1).toStr()
+            section.title = "Row " + ((i / 4) + 1 + offset).toStr()
         end if
         item = section.createChild("ContentNode")
         item.setFields({

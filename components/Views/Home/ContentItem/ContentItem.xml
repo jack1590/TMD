@@ -3,9 +3,6 @@
 
     <interface>
         <field id="itemContent" type="node" onChange="onItemContentChanged"/>
-        <field id="rowListHasFocus" type="boolean" onChange="onFieldChanged"/>
-        <field id="itemHasFocus" type="boolean" onChange="onFieldChanged"/>
-        <field id="focusPercent" type="float" onChange="onFieldChanged"/>
         <field id="width" type="float"/>
         <field id="height" type="float"/>
     </interface>

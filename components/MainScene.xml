@@ -9,6 +9,7 @@
 
     <children>
         <NavigationManager id="navigationManager" />
+        <BusySpinner id="spinner" />
     </children>
 </component>
 

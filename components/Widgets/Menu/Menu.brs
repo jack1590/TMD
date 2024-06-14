@@ -22,7 +22,6 @@ end sub
 sub onGenresChanged(event as Object)
     content = event.getData()
     m.menuGrid.content = content
-    m.menuGrid.setFocus(true)
     content = content.getChild(0).getFields()
     m.top.itemSelected = { id: content.id, name: content.name }
 end sub

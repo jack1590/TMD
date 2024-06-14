@@ -80,7 +80,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
         if key = "down" AND m.menu.isInFocusChain()
             m.contentRowList.setFocus(true)
             handled = true
-        else if key = "up" AND m.contentRowList.isInFocusChain()
+        else if (key = "up" OR key = "back") AND m.contentRowList.isInFocusChain()
             m.menu.setFocus(true)
             handled = true
         end if

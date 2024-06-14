@@ -15,7 +15,7 @@
     <children>
         <LayoutGroup
             id="layoutGroup">
-            <Poster id="poster"/>
+            <Poster id="poster" />
             <Label id="title" />
             <Label id="description" />
         </LayoutGroup>

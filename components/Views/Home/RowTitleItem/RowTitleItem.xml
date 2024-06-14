@@ -15,7 +15,7 @@
             id="line"
             width="8"
             height="36"
-            color="#FFB800FF"/>
+            color="#845E7D"/>
         <Label
             id="title"
             translation="[24,3]"/>

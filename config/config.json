@@ -1,6 +1,5 @@
 {
     "tmdAcessToken": "${TMD_ACCESS_TOKEN}",
-    "tmdApiKey": "${TMD_API_KEY}",
     "discoverFilters": {
         "page": 1,
         "sort_by": "popularity.desc",

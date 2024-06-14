@@ -3,6 +3,10 @@ sub init()
     registerObservers()
 end sub
 
+'|----------------------------------------------|
+'|              Private Methods                 |
+'|----------------------------------------------|
+
 sub bindComponents()
     m.indexSelected = 0
     m.menuGrid = m.top.findNode("menuGrid")
@@ -15,9 +19,17 @@ sub registerObservers()
     m.menuGrid.observeField("itemSelected", "onItemSelectedChanged")
 end sub
 
+'|----------------------------------------------|
+'|              Public Methods                  |
+'|----------------------------------------------|
+
 sub initialize()
     m.genresTask.control = "RUN"
 end sub
+
+'|----------------------------------------------|
+'|              Callbacks Methods               |
+'|----------------------------------------------|
 
 sub onGenresChanged(event as Object)
     content = event.getData()

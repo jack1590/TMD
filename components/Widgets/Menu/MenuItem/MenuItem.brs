@@ -3,6 +3,10 @@ sub init()
     setStyle()
 end sub
 
+'|----------------------------------------------|
+'|              Private Methods                 |
+'|----------------------------------------------|
+
 sub bindComponents()
     m.name = m.top.findNode("name")
     m.border = m.top.findNode("border")
@@ -11,6 +15,10 @@ end sub
 sub setStyle()
     m.name.font = getFont("pkg:/fonts/HKGrotesk-Bold.otf", 30)
 end sub
+
+'|----------------------------------------------|
+'|              Public Methods                  |
+'|----------------------------------------------|
 
 sub showcontent()
     itemcontent = m.top.itemContent

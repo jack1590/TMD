@@ -57,8 +57,8 @@ function Logger(logLevel = LogLevels().VERBOSE as Integer) as Object
             else
                 m.logLevel = level
             end if
-            if m.global <> invalid AND m.global.apiConfig <> invalid AND m.global.apiConfig.logLevel <> invalid
-                m.logLevel = m.global.apiConfig.logLevel
+            if m.global?.config?.logLevel <> invalid
+                m.logLevel = m.global.config.logLevel
             end if
         end function
 

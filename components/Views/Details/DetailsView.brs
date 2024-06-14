@@ -5,7 +5,7 @@ sub init()
 end sub
 
 '|----------------------------------------------|
-'|              Public Methods                 |
+'|              Public Methods                  |
 '|----------------------------------------------|
 sub initialize(viewParams as Object)
     content = viewParams.content
@@ -14,7 +14,7 @@ sub initialize(viewParams as Object)
     m.subtitle.text = content.releaseDate
     m.description.text = content.description
     uri = Substitute(m.global.config.imageEndpoint, "w" + (500).toStr(), content.FHDPosterUrl)
-    m.moviePoster.uri = "pkg:/images/splash_sd.png"
+    if content.FHDPosterUrl = "" then uri = "pkg:/images/failedImage.jpeg"
     m.moviePoster.setFields({
         loadDisplayMode: "scaleToFit"
         loadWidth: 900

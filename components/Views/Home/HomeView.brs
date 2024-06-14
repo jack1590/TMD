@@ -4,7 +4,7 @@ sub init()
 end sub
 
 '|----------------------------------------------|
-'|              Public Methods                 |
+'|              Public Methods                  |
 '|----------------------------------------------|
 sub initialize(viewParams as Object)
     m.menu.setFocus(true)

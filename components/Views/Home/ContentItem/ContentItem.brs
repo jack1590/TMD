@@ -43,8 +43,6 @@ sub onItemContentChanged(event as Object)
         loadDisplayMode: "scaleToFill"
         loadWidth: width
         loadHeight: height - 70
-        loadingBitmapUri: "pkg:/images/failedImage.jpeg"
-        failedBitmapUri: "pkg:/images/failedImage.jpeg"
         uri: uri
     })
 end sub

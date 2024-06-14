@@ -6,15 +6,6 @@ sub bindComponents()
     m.name = m.top.subtype()
     m.viewStack = []
     m.viewport = m.top.findNode("viewPort")
-    m.logger = Logger()
-    m.viewMap = {
-        home: {
-            node: "HomeView"
-        },
-        details: {
-            node: "DetailsView"
-        }
-    }
 end sub
 
 '|----------------------------------------------|
@@ -26,6 +17,15 @@ end sub
 '---------
 sub initialize()
     m.scene = m.top.getScene()
+    m.logger = Logger()
+    m.viewMap = {
+        home: {
+            node: "HomeView"
+        },
+        details: {
+            node: "DetailsView"
+        }
+    }
 end sub
 
 '---------
